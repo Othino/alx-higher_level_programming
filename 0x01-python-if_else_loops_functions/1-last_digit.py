@@ -5,11 +5,13 @@ tempNum = number
 
 if number < 0:
     number = -(number)
+else:
+    number = number
 
 lastDigit = number % 10
 if tempNum < 0:
     number = tempNum
-    lastDigit = (lastDigit)
+    lastDigit = -(lastDigit)
 
 if lastDigit > 5:
     string = "and is greater than 5"
