@@ -1,13 +1,10 @@
 #!/usr/bin/python3
-# -*- coding: utf-8 -*-
 """
-@author: Micah Othino
+This is the "Square"  module.
+This module provides a simple Square class.
 """
+
 
 class Square:
-    """Empty class Square that defines a square
-
-    Attributes:
-        empty
-    """
+    """A simple Square class"""
     pass
