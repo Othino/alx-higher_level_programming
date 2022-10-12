@@ -1,62 +1,35 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 """
-@author: Micah Othino
+Created on Tue May 19 14:21:54 2020
+@author: Robinson Montes
 """
 
+
 class Square:
-    """
-    class square that has attributes:
-        size
-    some attributes are protected from input.
+    """A class that defines a square by size, which defaults 0.
+    Square can also get area, and print square using '#'.
     """
     def __init__(self, size=0):
-        """
-        initialization function for our square clasee
-        """
-        if self.__validate_size(size):
-            self.__size = size
+        self.size = size
 
     @property
     def size(self):
-        """
-        getter for the size property
-        """
         return self.__size
 
     @size.setter
-    def size(self, value):
-        """
-        setter for the size property
-        """
-        if self.__validate_size(value):
-            self.__size = value
-
-    def area(self):
-        """
-        calculates the area of the square
-        """
-        return self.__size ** 2
-
-    def my_print(self):
-        """
-        prints the square using '#' characters
-        """
-        i = 0
-        for i in range(0, self.__size):
-            j = 0
-            for j in range(0, self.__size):
-                print("#", end='')
-            print()
-
-    def __validate_size(self, size):
-        """
-        validates the size, checking for errors
-        """
+    def size(self, size):
         if type(size) != int:
             raise TypeError("size must be an integer")
-        elif size < 0:
+        if size < 0:
             raise ValueError("size must be >= 0")
-        else:
-            return True
-        return False
+        self.__size = size
+
+    def area(self):
+        return self.__size * self.__size
+
+    def my_print(self):
+        if self.__size is 0:
+            print("")
+        for i in range(self.__size):
+            print("#" * self.__size)
