@@ -1,23 +1,22 @@
-able File  21 lines (16 sloc)  607 Bytes
-
 #!/usr/bin/python3
+import dis
 import math
 
 
 class MagicClass:
-
-    """Class that stores the properties
-    of a circumference"""
     def __init__(self, radius=0):
         self.__radius = 0
+
         if type(radius) is not int and type(radius) is not float:
-            raise TypeError('radius must be a number')
+            raise TypeError("radius must be a number")
         self.__radius = radius
 
-    """ Method that calculates the area of the circumference """
-    def area(self):
-        return ((self.__radius ** 2) * math.pi)
+    @property
+    def radius(self):
+        return self.__radius
 
-    """ Method that calculates the perimeter of a circumference """
+    def area(self):
+        return self.__radius ** 2 * math.pi
+
     def circumference(self):
-        return (2 * math.pi * self.__radius)
+        return 2 * math.pi * self.__radius
