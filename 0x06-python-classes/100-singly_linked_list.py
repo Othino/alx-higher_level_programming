@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
-# This is the "Single Linked List" module.
+This is the "Single Linked List" module.
+@author: Micah Othino
 """
-
 
 class Node:
     """
