@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """
-This is the "Single Linked List" module.
-Class Node takes in integer values as data within each node,
+This is the "Single Linked List" module. Class Node takes in integer values as data within each node,
 and a next attribute which points to the next node or to None.
 """
 
 
 class Node:
-    """A class that creates a single Node in a Linked List.
+    """
+    A class that creates a single Node in a Linked List.
     """
     def __init__(self, data, next_node = None):
         self.data = data
