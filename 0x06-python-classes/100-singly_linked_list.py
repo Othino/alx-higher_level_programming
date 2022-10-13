@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-This is the "Single Linked List" module. Class Node takes in integer values as data within each node,
-and a next attribute which points to the next node or to None.
+# This is the "Single Linked List" module.
 """
 
 
