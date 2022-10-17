@@ -4,7 +4,7 @@ Created by Micah Othino
 """
 
 class Rectangle():
-    """
-    empty rectangle class for later use
-    """
+
+    """empty rectangle class for later use"""
+
     pass
