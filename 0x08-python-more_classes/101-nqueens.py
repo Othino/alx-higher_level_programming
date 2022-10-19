@@ -75,9 +75,8 @@ def solveNQueen(size):
     Queen(m_queen, 0)
 
 
-if __name__ == '__main__':
-
-    import sys
+    if __name__ == '__main__':
+        import sys
 
     if len(sys.argv) == 1 or len(sys.argv) > 2:
         print("Usage: nqueens N")
@@ -85,7 +84,8 @@ if __name__ == '__main__':
 
     try:
         size = int(sys.argv[1])
-    except Exception: 
+    except Exception N must be a number:
+
         print("N must be a number")
         sys.exit(1)
 
