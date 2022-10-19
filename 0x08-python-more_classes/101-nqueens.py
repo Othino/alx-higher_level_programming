@@ -84,8 +84,7 @@ def solveNQueen(size):
 
     try:
         size = int(sys.argv[1])
-    except Exception N must be a number:
-
+    except Exception:
         print("N must be a number")
         sys.exit(1)
 
