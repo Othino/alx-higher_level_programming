@@ -5,24 +5,18 @@ representing the Pascal’s triangle of n.
 """
 
 
-
 def pascal_triangle(n):
+    """Represents Pascal's Triangle of size n
     """
-    Creates a pascal triangle
-    Attributes:
-        n (int): The n exponent for triangle
-    Return:
-        A matrix with values for the triangle
-    """
-    pascal = []
-    triangle = []
+    if n <= 0:
+        return []
 
-    for i in range(int(n)):
-        new = pascal[:]
-        new.append(1)
-        pos = len(pascal)
-        for i in range(1, pos):
-            new[i] = pascal[i - 1] + pascal[i]
-        pascal = new[:]
-        triangle.append(pascal)
-    return triangle
+    triangles = [[1]]
+    while len(triangles) != n:
+        tri = triangles[-1]
+        tmp = [1]
+        for i in range(len(tri) - 1):
+            tmp.append(tri[i] + tri[i + 1])
+        tmp.append(1)
+        triangles.append(tmp)
+    return triangles
