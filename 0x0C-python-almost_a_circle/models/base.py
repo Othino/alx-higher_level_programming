@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-# -*- coding: utf-8 -*-
 """
 Base class
 @author: Micah Othino
 """
+
+
 import json
 
 
