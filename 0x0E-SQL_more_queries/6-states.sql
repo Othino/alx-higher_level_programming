@@ -1,12 +1,7 @@
 -- Create database and table
--- DDL query
 CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
 
---Set database to new database
-USE hbtn_0d_usa;
-
 --Create new table
-CREATE TABLE IF NOT EXISTS states(
-id INT NOT NULL AUTO_INCREMENT UNIQUE,
-name VARCHAR(256) NOT NULL, PRIMARY KEY (id));
-Create database and table
+CREATE TABLE IF NOT EXISTS hbtn_0d_usa.states (
+id INT UNIQUE AUTO_INCREMENT NOT NULL PRIMARY KEY,
+name VARCHAR(256) NOT NULL);
