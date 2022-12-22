@@ -4,20 +4,26 @@
 Changes the name of a State object from the database hbtn_0e_6_usa
 """
 
-import sys
 from model_state import Base, State
-from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from sqlalchemy import (create_engine)
+import sys
+
 
 if __name__ == '__main__':
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
-                           format(sys.argv[1], sys.argv[2], sys.argv[3]),
-                           pool_pre_ping=True)
+    args = sys.argv
+    if len(args) != 4:
+        print("Usage: {} username password database_name".format(args[0]))
+        exit(1)
+    username = args[1]
+    password = args[2]
+    data = args[3]
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
+                           .format(username, password, data))
+    # create custom session object class from database engine
     Session = sessionmaker(bind=engine)
+    # create instance of new custom session class
     session = Session()
-
-    stateUpdated = session.query(State).filter(State.id == 2).first()
-
-    if stateUpdated:
-        stateUpdated.name = 'New Mexico'
-        session.commit()
+    new_state = session.query(State).filter(State.id == 2).one()
+    new_state.name = 'New Mexico'
+    session.commit()
