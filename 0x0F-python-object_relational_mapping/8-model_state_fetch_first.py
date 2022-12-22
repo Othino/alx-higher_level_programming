@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 
 """
-Author: Othino
+Prints the first object from a database
 """
 
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import (create_engine)
 import sys
+
 
 if __name__ == '__main__':
     args = sys.argv
